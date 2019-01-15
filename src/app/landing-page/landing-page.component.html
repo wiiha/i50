@@ -1,0 +1,24 @@
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center">CONTENT</h2>
+    </div>
+  </div>
+  <div *ngFor="let item of lpItems" class="row border border-success m-2 ml-md-5 mr-md-5 lpItem" [ngStyle]="{'background-image': 'url(' + item.bgi + ')'}">
+    <div class="
+    col">
+    <h3>{{item.title}}</h3>
+    <div class="row">
+      <div class="col">
+        <p>{{item.content}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="mb-2 btn btn-primary" routerLink="/{{item.page}}">LÄS MER</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
