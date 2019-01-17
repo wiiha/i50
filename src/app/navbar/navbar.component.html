@@ -1,11 +1,11 @@
 <nav *ngIf="showNavBar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" routerLink="/">Överblick</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="/page1">Page 1 <span class="sr-only">(current)</span></a>
+      <a *ngFor="let item of cp.getItemsAsMenu()" class="nav-item nav-link active" routerLink="/page/{{item.page}}">{{item.title}}</a>
     </div>
   </div>
 </nav>

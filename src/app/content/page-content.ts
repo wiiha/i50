@@ -10,7 +10,7 @@ export const pageItems = [
         title: "Hello second World",
         content: "New sagittis lacus. Praesent at nibh sit amet urna volutpat congue.",
         order: 1,
-        page: 'sec',
+        page: undefined,
         bgi: "https://images.pexels.com/photos/849835/pexels-photo-849835.jpeg"
         
     },

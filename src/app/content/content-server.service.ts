@@ -27,4 +27,15 @@ export class ContentServerService {
     console.log("(getItemByPath) did not find match for: " + path);
     return undefined;
   }
+
+  getItemsAsMenu(){
+    var pages = [];
+    this.pageItemsObjArr.forEach(item => {
+      if (item.page) {
+        pages.push({"title": item.title, "page":item.page});
+      }
+    })
+    return pages;
+  }
+
 }
