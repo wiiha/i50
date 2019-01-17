@@ -1,4 +1,4 @@
-export const landingPageItems = [
+export const pageItems = [
     {
         title: "Hello World",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus nibh ut erat ullamcorper euismod. Duis dignissim dignissim quam. Nunc iaculis ipsum quis nibh placerat, et rutrum lacus semper. Curabitur luctus viverra neque nec scelerisque. Aliquam erat volutpat. Morbi quis imperdiet ligula, a sagittis lacus. Praesent at nibh sit amet urna volutpat congue.",

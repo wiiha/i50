@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { landingPageItems } from "./landing-page-content";
+
+import { ContentServerService } from "../content/content-server.service";
 
 @Component({
   selector: 'app-landing-page',
@@ -7,13 +8,14 @@ import { landingPageItems } from "./landing-page-content";
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-  lpItems = landingPageItems;
+  // lpItems = landingPageItems;
 
-  constructor() { }
+  constructor(public cp: ContentServerService) { }
 
   ngOnInit() {
-    console.log(this.lpItems);
-    
+    // console.log(this.cp.getAllContent());
+    this.cp.getItemByPath("ddd");
+
   }
 
 }
