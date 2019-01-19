@@ -11,7 +11,7 @@ import { ContentServerService } from "../content/content-server.service";
 export class NavbarComponent implements OnInit {
 
   showNavBar:boolean = true;
-  navBarCollapsed = true;
+  // navBarCollapsed = true;
   
   constructor(private nss:NavbarStateService, public cp:ContentServerService) { }
 
@@ -22,18 +22,18 @@ export class NavbarComponent implements OnInit {
     })
     
   }
-  test(){
-    console.log("link clicked!");
+  // test(){
+  //   console.log("link clicked!");
     
-  }
+  // }
 
-  toggleNavBarCollapsed(){
-    this.navBarCollapsed = !this.navBarCollapsed;
-  }
+  // toggleNavBarCollapsed(){
+  //   this.navBarCollapsed = !this.navBarCollapsed;
+  // }
 
-  setNavBarCollapsed(val:boolean){
-    console.log("link clicked!");
-    this.navBarCollapsed = val;
-  }
+  // setNavBarCollapsed(val:boolean){
+  //   console.log("link clicked!");
+  //   this.navBarCollapsed = val;
+  // }
 
 }

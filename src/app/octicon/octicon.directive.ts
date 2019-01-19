@@ -14,7 +14,7 @@ export class OcticonDirective implements OnInit {
     constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
     ngOnInit(): void {
-      console.log(this.octicon, this.fill, this.width);
+    //   console.log(this.octicon, this.fill, this.width);
       
         const el: HTMLElement = this.elementRef.nativeElement;
         el.innerHTML = octicons[this.octicon].toSVG();
