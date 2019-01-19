@@ -28,7 +28,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "../node_modules/octicons/build/build.css"
+              "./node_modules/octicons/build/build.css"
             ],
             "scripts": []
           },
