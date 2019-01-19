@@ -1,24 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from "rxjs/operators";
 
 import { ContentServerService } from "../content/content-server.service";
 import { NavbarStateService } from "../navbar/navbar-state.service";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-present-page',
   templateUrl: './present-page.component.html',
   styleUrls: ['./present-page.component.scss']
 })
-export class PresentPageComponent implements OnInit {
+export class PresentPageComponent implements OnInit, OnDestroy {
 
   pageItem = undefined;
+  routerEventSub: Subscription;
 
   constructor(private router: Router,
     private cp: ContentServerService,
     private nss: NavbarStateService) {
 
-    router.events.pipe( //keeping track of route changes to update content of page.
+    this.routerEventSub = router.events.pipe( //keeping track of route changes to update content of page.
       filter(e => e instanceof NavigationEnd)
     ).subscribe(e => {
       this.routeChanged();
@@ -47,6 +49,10 @@ export class PresentPageComponent implements OnInit {
       this.router.navigate(['/']);
     }
 
+  }
+
+  ngOnDestroy(){
+    this.routerEventSub.unsubscribe();
   }
 
 }
