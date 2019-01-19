@@ -1,7 +1,25 @@
-<div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <h2 class="text-left">{{pageItem.title}}</h2>
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-left">{{pageItem.title}}</h2>
+      <div class="row">
+        <div class="col">
+          <p>{{pageItem.long}}</p>
+        </div>
       </div>
     </div>
   </div>
+</div> -->
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col col-lg-10">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">{{pageItem.title}}</h5>
+          <p class="card-text">{{pageItem.long}}</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

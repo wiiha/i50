@@ -1,3 +1,6 @@
+<div class="progress" style="height: 2px;">
+  <div class="progress-bar bg-success w-100" role="progressbar"></div>
+</div>
 <div class="container-fluid">
   <div class="row">
     <div class="col">
@@ -10,7 +13,7 @@
         <h3>{{item.title}}</h3>
         <div class="row">
           <div class="col">
-            <p>{{item.content}}</p>
+            <p>{{item.short}}</p>
           </div>
         </div>
         <div *ngIf="item.page" class="row">
